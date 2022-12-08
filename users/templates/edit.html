@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Member</title>
+</head>
+<body>
+    <h1>Edit member</h1>
+    <form action="update/{{ member.id }}" method="post">
+        {% csrf_token %}
+        Name: <input name="name" value="{{ member.name }}"><br><br>
+        Address: <textarea name="address">{{ member.address }}</textarea><br><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>
